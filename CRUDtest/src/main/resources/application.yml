@@ -1,0 +1,12 @@
+server:
+  port: 7777
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/menudb
+    username: root
+    password: 1234
+
+mybatis:
+  mapper-locations: mapper/**/*.xml

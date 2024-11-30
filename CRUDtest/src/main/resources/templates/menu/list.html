@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴 전체조회</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>메뉴 코드</th>
+            <th>메뉴 이름</th>
+            <th>메뉴 가격</th>
+            <th>카테고리 코드</th>
+            <th>판매 여부</th>
+        </tr>
+        <tr th:each="menu : ${menuList}">
+            <td align="center">
+                <a th:href="@{/menu/menuDetail(code=${menu.code})}" th:text="${menu.code}"></a>
+            </td>
+            <td th:text="${menu.name}" align="center"></td>
+            <td th:text="${menu.price}" align="center"></td>
+            <td th:text="${menu.categoryCode}" align="center"></td>
+            <td th:text="${menu.orderableStatus}" align="center"></td>
+        </tr>
+    </table>
+</body>
+</html>

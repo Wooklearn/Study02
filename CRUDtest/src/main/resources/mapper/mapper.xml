@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohgiraffers.crudtest.model.dao.Mapper">
+    <resultMap id="menuResult" type="com.ohgiraffers.crudtest.menu.controller.MenuDTO">
+        <id property="code" column="menu_code"/>
+        <result property="name" column="menu_name"/>
+        <result property="price" column="menu_price"/>
+        <result property="categoryCode" column="category_code"/>
+        <result property="orderableStatus" column="orderable_status"/>
+    </resultMap>
+    <select id="menuList" resultMap="menuResult">
+        SELECT
+            *
+        FROM
+            TBL_MENU
+    </select>
+
+    <select id="selectMenu" resultMap="menuResult">
+        SELECT
+            *
+        FROM
+            TBL_MENU
+        WHERE
+            MENU_CODE = #{code}
+    </select>
+
+    <delete id="deleteMenu" parameterType="com.ohgiraffers.crudtest.menu.controller.MenuDTO">
+        DELETE FROM TBL_MENU
+        WHERE MENU_CODE = #{code}
+
+
+    </delete>
+</mapper>
