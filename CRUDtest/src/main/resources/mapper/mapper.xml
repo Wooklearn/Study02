@@ -32,4 +32,14 @@
 
 
     </delete>
+
+    <select id="menuDetail" resultMap="menuResult">
+        SELECT
+            *
+        FROM
+            TBL_MENU
+        WHERE
+            MENU_CODE = #{code}
+
+    </select>
 </mapper>

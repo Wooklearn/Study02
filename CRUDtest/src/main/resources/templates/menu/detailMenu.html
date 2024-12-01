@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const message = `[[${successMessage}]]`;
+    if(message) {
+        alert(message);
+    }
+</script>
+
+<h1 th:text="${menuDetail}"></h1>
+<button><a th:href="@{/menu/update(code=${menuDetail.code})} ">수정</a></button>
+</body>
+</html>

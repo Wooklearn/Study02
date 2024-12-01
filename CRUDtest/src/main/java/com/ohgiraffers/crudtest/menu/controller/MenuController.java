@@ -64,5 +64,15 @@ public class MenuController {
         return "/menu/delete";
     }
 
+    @GetMapping("menuDetail")
+    public String menuDetail(@RequestParam String code, Model model){
+
+        MenuDTO menu = menuService.menuDetail(code);
+
+        model.addAttribute("menuDetail", menu);
+
+
+        return "/menu/detailMenu";
+    }
 
 }

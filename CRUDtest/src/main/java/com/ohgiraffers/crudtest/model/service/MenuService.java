@@ -27,4 +27,8 @@ public class MenuService {
     public void deleteMenu(int code) {
         mapper.deleteMenu(code);
     }
+
+    public MenuDTO menuDetail(String code) {
+        return mapper.menuDetail(code);
+    }
 }

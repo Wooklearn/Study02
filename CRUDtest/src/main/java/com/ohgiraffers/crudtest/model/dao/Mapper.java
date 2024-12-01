@@ -2,6 +2,7 @@ package com.ohgiraffers.crudtest.model.dao;
 
 import com.ohgiraffers.crudtest.menu.controller.MenuDTO;
 
+import java.awt.*;
 import java.util.List;
 
 @org.apache.ibatis.annotations.Mapper
@@ -14,4 +15,6 @@ public interface Mapper {
 
 
     void deleteMenu(int code);
+
+    MenuDTO menuDetail(String code);
 }
