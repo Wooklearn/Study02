@@ -37,10 +37,11 @@ public class MenuController {
     }
 
     @GetMapping("select")
-    public void selectMenu1(){}
+    public void selectMenu1() {
+    }
 
     @PostMapping("select")
-    public String selectMenu(int code, Model model){
+    public String selectMenu(int code, Model model) {
 
         MenuDTO menuCode = menuService.getselectMenu(code);
 
@@ -65,7 +66,7 @@ public class MenuController {
     }
 
     @GetMapping("menuDetail")
-    public String menuDetail(@RequestParam String code, Model model){
+    public String menuDetail(@RequestParam String code, Model model) {
 
         MenuDTO menu = menuService.menuDetail(code);
 
@@ -75,4 +76,9 @@ public class MenuController {
         return "/menu/detailMenu";
     }
 
+    @GetMapping("update")
+    public String menuUpdate() {
+
+        return "menu/update";
+    }
 }
