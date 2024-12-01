@@ -31,4 +31,8 @@ public class MenuService {
     public MenuDTO menuDetail(String code) {
         return mapper.menuDetail(code);
     }
+
+    public void menuUpdate() {
+        mapper.menuUpdate();
+    }
 }

@@ -40,6 +40,12 @@
             TBL_MENU
         WHERE
             MENU_CODE = #{code}
-
     </select>
+
+    <update id="menuUpdate">
+        UPDATE INTO TBL_MENU
+        WHERE
+            MENU_CODE 
+    </update>
+
 </mapper>

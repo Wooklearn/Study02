@@ -17,4 +17,6 @@ public interface Mapper {
     void deleteMenu(int code);
 
     MenuDTO menuDetail(String code);
+
+    void menuUpdate();
 }
