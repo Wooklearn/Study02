@@ -18,5 +18,5 @@ public interface Mapper {
 
     MenuDTO menuDetail(String code);
 
-    MenuDTO menuUpdate();
+    void menuUpdate();
 }

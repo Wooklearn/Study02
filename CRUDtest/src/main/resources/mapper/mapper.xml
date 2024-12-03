@@ -43,7 +43,11 @@
     </select>
 
     <update id="menuUpdate" parameterType="com.ohgiraffers.crudtest.menu.controller.MenuDTO">
-        UPDATE INTO TBL_MENU
+        UPDATE
+            TBL_MENU
+        SET
+            MENU_CODE,
+            MENU_NAME
         WHERE
             MENU_CODE = ${code}
     </update>
