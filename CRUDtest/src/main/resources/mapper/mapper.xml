@@ -42,7 +42,7 @@
             MENU_CODE = #{code}
     </select>
 
-    <update id="menuUpdate">
+    <update id="menuUpdate" parameterType="com.ohgiraffers.crudtest.menu.controller.MenuDTO">
         UPDATE INTO TBL_MENU
         WHERE
             MENU_CODE 
