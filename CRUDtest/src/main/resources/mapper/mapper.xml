@@ -45,7 +45,7 @@
     <update id="menuUpdate" parameterType="com.ohgiraffers.crudtest.menu.controller.MenuDTO">
         UPDATE INTO TBL_MENU
         WHERE
-            MENU_CODE 
+            MENU_CODE = ${code}
     </update>
 
 </mapper>
