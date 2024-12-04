@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/menu/update" method="post">
+        메뉴 코드 : <input type="number" name="code" th:value="${menu.code}" readonly> <br>
+        메뉴 이름 : <input type="text" name="name" th:value="${menu.name}"><br>
+        메뉴 가격 : <input type="number" name="price" th:value="${menu.price}"><br>
+        카테고리 코드 : <input type="number" name="categoryCode" th:value="${menu.categoryCode}"><br>
+        판매 상태 : <input type="text" name="orderableStatus" th:value="${menu.orderableStatus}"><br>
+        <button type="submit">수정</button>
+    </form>
+</body>
+</html>

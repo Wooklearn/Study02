@@ -32,7 +32,7 @@ public class MenuService {
         return mapper.menuDetail(code);
     }
 
-    public void menuUpdate() {
-        mapper.menuUpdate();
+    public void menuUpdate(MenuDTO menu) {
+        mapper.menuUpdate(menu);
     }
 }
