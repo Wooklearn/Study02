@@ -3,6 +3,7 @@ package com.ohgiraffers.crudtest.model.service;
 import com.ohgiraffers.crudtest.menu.controller.MenuDTO;
 import com.ohgiraffers.crudtest.model.dao.Mapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class MenuService {
         return mapper.menuDetail(code);
     }
 
+    @Transactional
     public void menuUpdate(MenuDTO menu) {
         mapper.menuUpdate(menu);
     }

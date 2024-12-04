@@ -86,7 +86,7 @@ public class MenuController {
     }
 
     @PostMapping("update")
-    public String menuUpdate(@RequestParam MenuDTO menu, RedirectAttributes rttr, Locale locale) {
+    public String menuUpdateResult(@RequestParam MenuDTO menu, RedirectAttributes rttr, Locale locale) {
         menuService.menuUpdate(menu);
 
         return "redirect:/menu/menuDetail?code" + menu.getCode();
