@@ -90,5 +90,7 @@ public class MenuController {
         menuService.menuUpdate(menu);
 
         return "redirect:/menu/menuDetail?code" + menu.getCode();
+
+
     }
 }
