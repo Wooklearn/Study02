@@ -18,6 +18,10 @@ public class Menu2Service {
         return repository.searchMenu(menu);
     }
 
+    public Menu2 categoryMenu() {
+
+        return repository.categoryMenu();
+    }
 
 
 }

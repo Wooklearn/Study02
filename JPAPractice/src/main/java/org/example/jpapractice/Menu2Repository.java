@@ -24,4 +24,9 @@ public class Menu2Repository {
         return manager.createQuery(categoryMenu, Menu2.class)
                 .setParameter("categoryCode", menu.getCategoryCode()).getResultList();
     }
+
+
+    public Menu2 categoryMenu() {
+        return null;
+    }
 }
