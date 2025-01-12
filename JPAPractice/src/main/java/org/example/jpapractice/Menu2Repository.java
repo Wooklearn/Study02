@@ -20,13 +20,15 @@ public class Menu2Repository {
                 "FROM tbl_menu " +
                 "WHERE categoryCode = :categoryCode";
 
-
         return manager.createQuery(categoryMenu, Menu2.class)
                 .setParameter("categoryCode", menu.getCategoryCode()).getResultList();
     }
 
-
     public Menu2 categoryMenu() {
         return null;
+    }
+
+    public void deleteMenu() {
+        return;
     }
 }
