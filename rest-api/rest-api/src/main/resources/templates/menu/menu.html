@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>카테고리 코드로 메뉴 조회</h1>
+    <form action="/menu/category" method="get">
+      <input type="number" name="categoryCode">
+      <button type="submit">조회</button>
+    </form>
+    <table>
+        <tr>
+            <th>메뉴번호</th>
+            <th>메뉴이름</th>
+            <th>메뉴가격</th>
+            <th>카테고리이름</th>
+            <th>판매상태</th>
+        </tr>
+        <tr th:each="result : ${categoryCode}">
+            <td th:text="${result.menuCode}"></td>
+            <td th:text="${result.menuName}"></td>
+            <td th:text="${result.menuPrice}"></td>
+            <td th:text="${result.categoryCode.categoryName}"></td>
+            <td th:text="${result.orderableStatus}"></td>
+        </tr>
+    </table>
+</body>
+</html>

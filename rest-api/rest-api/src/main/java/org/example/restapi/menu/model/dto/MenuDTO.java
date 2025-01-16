@@ -1,4 +1,4 @@
-package org.example.restapi.menu;
+package org.example.restapi.menu.model.dto;
 
 import lombok.*;
 
@@ -12,7 +12,7 @@ public class MenuDTO {
     private int menuCode;
     private String menuName;
     private int menuPrice;
-    private int categoryCode;
+    private CategoryDTO categoryCode;
     private String orderableStatus;
 
 }
