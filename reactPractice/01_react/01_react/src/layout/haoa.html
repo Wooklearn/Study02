@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.8.1/prop-types.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- 
+        hooks 는 함수형 컴포넌트에서 사용 불가능한 생명주기 메소드(라이프사이클 참조)를
+        해결하기 위한 함수의 집합을 의미한다.
+        그 중 상태관리(변화하는 값)를 위한 useState 훅을 살펴보았다.
+
+        컴포넌트가 렌더링이 된 이후에 특정 작업을 수행할 필요가 있다면
+        클래스형 컴포넌트에서는 DidMount DidUpdate 메소드를 사용했었다.
+        하지만, 함수형 컴포넌트는 해당 메소드가 존재하기 않기 때문에
+        useEffect 라는 훅을 사용할 수 있다. 비동기, setTimeout, setInterval 등의
+        작업은 일반적인 코드 흐름과 다르게 움직인다.
+    -->
+    <script type="text/babel">
+        // 자바스크립트의 동작원리!! start 다음 end 다음 time!
+        // console.log('start');
+        // setTimeout(() => console.log('time'), 1000);
+        // console.log('end');
+
+        /* useEffect 는 마운트나 업데이트 이후 무엇인가 하고 싶은 코드가
+            존재할 때 사용하는 hook 이다. */
+        const {useEffect} = React;
+
+        console.log(React);
+        console.log(useEffect);
+
+        function Message({message}) {
+
+            useEffect( () => {
+                console.log("렌더링 이후 동작하니??");
+                console.log(message);
+            })
+
+            console.log('렌더링...');
+
+            return(
+                <>
+                    <h1>{console.log('렌더링 시 출력됨...')}{message}</h1>
+                </>
+            );
+        }
+
+        const message = "안녕!!";
+
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<Message massage={message}/>);
+    </script>
+</body>
+</html>
