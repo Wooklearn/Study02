@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Component1 from "./Component1";
-import Component6 from "./Component6";
+import Component1 from "./practice/Component1";
+import Component6 from "./practice/Component6";
 
 
 function App() {
