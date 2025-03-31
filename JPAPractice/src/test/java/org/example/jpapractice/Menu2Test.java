@@ -13,8 +13,6 @@ public class Menu2Test {
     @Autowired
     private Menu2Service service;
 
-
-
     @DisplayName("카테고리 코드를 이용한 메뉴 조회")
     @Test
     void categorySearch() {
