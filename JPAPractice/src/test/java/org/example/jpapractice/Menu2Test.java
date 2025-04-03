@@ -27,5 +27,4 @@ public class Menu2Test {
         System.out.println("menu = " + menu);
     }
 
-
 }
