@@ -31,5 +31,5 @@ public class Menu2 {
     @Column(name = "orderable_status")
     private String orderableStatus;
 
-    
+
 }
