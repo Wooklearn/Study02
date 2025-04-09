@@ -13,6 +13,7 @@ import lombok.extern.apachecommons.CommonsLog;
 @Table(name = "tbl_menu")
 public class Menu2 {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "menu_code")
@@ -30,4 +31,5 @@ public class Menu2 {
     @Column(name = "orderable_status")
     private String orderableStatus;
 
+    
 }
