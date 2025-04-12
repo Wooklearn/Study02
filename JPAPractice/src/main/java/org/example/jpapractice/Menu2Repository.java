@@ -12,7 +12,7 @@ public class Menu2Repository {
 
     @PersistenceContext
     public EntityManager manager;
-    
+
     public List<Menu2> searchMenu(Menu2 menu) {
 
         String categoryMenu = "SELECT menuCode,menuName,menuPrice,categoryCode,orderableStatus " +
