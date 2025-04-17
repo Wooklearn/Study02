@@ -23,6 +23,4 @@ public class Menu2Service {
 
         return repository.categoryMenu();
     }
-
-
 }
