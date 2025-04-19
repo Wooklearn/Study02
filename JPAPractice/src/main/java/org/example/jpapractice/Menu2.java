@@ -14,6 +14,7 @@ import lombok.extern.apachecommons.CommonsLog;
 public class Menu2 {
 
 
+
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
