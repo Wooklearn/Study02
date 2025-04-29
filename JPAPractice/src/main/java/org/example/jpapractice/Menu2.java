@@ -15,7 +15,8 @@ public class Menu2 {
 
 
 
-    
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "menu_code")
