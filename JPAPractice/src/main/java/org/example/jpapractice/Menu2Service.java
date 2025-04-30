@@ -10,12 +10,14 @@ import java.util.List;
 @Service
 public class Menu2Service {
 
+
     @Autowired
     private Menu2Repository repository;
 
     @Transactional
     public List<Menu2> searchMenu(Menu2 menu) {
 
+        
         return repository.searchMenu(menu);
     }
 
