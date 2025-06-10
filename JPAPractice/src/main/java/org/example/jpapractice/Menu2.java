@@ -12,6 +12,7 @@ import lombok.extern.apachecommons.CommonsLog;
 @Entity(name = "tbl_menu")
 @Table(name = "tbl_menu")
 public class Menu2 {
+
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
